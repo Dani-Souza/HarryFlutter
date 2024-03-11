@@ -88,7 +88,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.d
+        // in the middle of the parent.
         child: Row(
           // Column is also a layout widget. It takes a list of children and
           // arranges them vertically. By default, it sizes itself to fit its
@@ -123,7 +123,7 @@ class _MyHomePageState extends State<MyHomePage> {
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
-        backgroundColor: Color.fromARGB(255, 100, 15, 134),
+        backgroundColor: const Color.fromARGB(255, 58, 51, 29),
         foregroundColor : Colors.redAccent.shade700,
         child: const Icon(Icons.add_task),
       ), // This trailing comma makes auto-formatting nicer for build methods.
