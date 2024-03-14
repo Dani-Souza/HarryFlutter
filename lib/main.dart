@@ -31,10 +31,12 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
+  String _result = "resultado";
 
   void _incrementCounter() {
     setState(() {
       _counter++;
+      _result = _counter.toString();
     });
   }
 
@@ -54,9 +56,9 @@ class _MyHomePageState extends State<MyHomePage> {
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
             Text(
-              '$_counter',
+              _result,
               style: const TextStyle(
-                fontSize: 60.0,
+                fontSize: 30.0,
                 color: Colors.red,
                 fontWeight: FontWeight.bold,
               ),
