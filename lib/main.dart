@@ -106,15 +106,15 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
             const Text(
-              'Quantidade de Cliques no botão:',
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              'You have pushed the button this many times:',
+              style: TextStyle(fontSize: 18 ,fontWeight: FontWeight.bold),
             ),
             Text(
               '$_counter',
               style: const TextStyle(
-                fontSize: 60.0,
-                color: Colors.red,
-                fontWeight: FontWeight.bold,
+                  fontSize: 60.0,
+                  color: Colors.red,
+                  fontWeight: FontWeight.bold,
               ),
             ),
           ],
@@ -124,7 +124,7 @@ class _MyHomePageState extends State<MyHomePage> {
         onPressed: _incrementCounter,
         tooltip: 'Increment',
         backgroundColor: Colors.amber[100],
-        foregroundColor: Colors.redAccent.shade700,
+        foregroundColor : Colors.redAccent.shade700,
         child: const Icon(Icons.add_task),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
