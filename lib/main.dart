@@ -40,6 +40,22 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  /*
+  Crie uma função que inicialize uma lista com números inteiros. Como resultado,
+  mostre na tela uma lista com o quadrado dos números da lista original.
+  Exemplo: entrada = [1, 2, 3] | saída = [1, 4, 9]*/
+  void _desafio12() {
+    //inicializado lista
+    List<int> numeros = [1, 2, 3];
+    //inicializado uma nova lista com novos valores
+    List<int> numerosAoQuadrado =
+        numeros.map((numero) => numero * numero).toList();
+    _result = "Entrada = $numeros \nSaída = ${numerosAoQuadrado.toString()} ";
+    setState(() {
+      _result;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -52,7 +68,6 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
-
               'Resultado:',
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
@@ -71,7 +86,7 @@ class _MyHomePageState extends State<MyHomePage> {
         onPressed: _incrementCounter,
         tooltip: 'Increment',
         backgroundColor: Colors.amber[100],
-        foregroundColor : Colors.redAccent.shade700,
+        foregroundColor: Colors.redAccent.shade700,
         child: const Icon(Icons.add_task),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
