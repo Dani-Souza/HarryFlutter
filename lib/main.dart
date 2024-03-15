@@ -40,6 +40,30 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+void desafio4(){
+  int numero = 0;
+  String parImpar;
+  String positivoNegativo;
+
+  if(numero % 2 == 0){
+    parImpar = 'par';
+  } else{
+    parImpar = 'Impar';
+  }
+
+    if( numero >= 0){
+      positivoNegativo ='positivo';
+    }else{
+      positivoNegativo = 'Negativo';
+    }
+
+  _result = 'o numero $numero eh $parImpar e $positivoNegativo';
+
+  setState(() {
+    _result; 
+  });
+}
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -68,7 +92,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
+        onPressed: desafio4,
         tooltip: 'Increment',
         backgroundColor: Colors.amber[100],
         foregroundColor : Colors.redAccent.shade700,
