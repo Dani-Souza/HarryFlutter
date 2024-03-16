@@ -39,6 +39,17 @@ class _MyHomePageState extends State<MyHomePage> {
       _result = _counter.toString();
     });
   }
+  
+  void _desafio08() {
+    List<int> valores = [5, 6, 1, 9];
+
+    valores.sort((a, b) => b.compareTo(a));
+    _result = "Valores em ordem decrescente: $valores";
+
+    setState(() {
+      _result;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
