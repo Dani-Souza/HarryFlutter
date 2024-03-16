@@ -40,6 +40,17 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  /*  Faça uma função que inicialize um número inteiro qualquer. Como resultado, mostre na tela o seu antecessor e o seu sucessor.*/
+  void _desafio06() {
+    int numero = 6;
+
+    _result =
+        "O número $numero o seu antecessor é o número ${numero - 1} e o seu sucessor número ${numero + 1} ";
+    setState(() {
+      _result;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -52,7 +63,6 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
-
               'Resultado:',
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
@@ -69,9 +79,9 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
-        tooltip: 'Increment',
+        tooltip: 'increment',
         backgroundColor: Colors.amber[100],
-        foregroundColor : Colors.redAccent.shade700,
+        foregroundColor: Colors.redAccent.shade700,
         child: const Icon(Icons.add_task),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
