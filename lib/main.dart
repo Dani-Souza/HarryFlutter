@@ -40,6 +40,18 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+    void desafio07(){
+      double salarioMinimo = 1412;
+      double salarioUsuario = 3000;
+      double resultado =salarioUsuario / salarioMinimo;
+
+
+      setState(() {
+      _result = 'o usuario recebe $resultado salarios minimos';
+    });
+
+
+    }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -68,7 +80,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
+        onPressed: desafio07,
         tooltip: 'Increment',
         backgroundColor: Colors.amber[100],
         foregroundColor : Colors.redAccent.shade700,
