@@ -40,6 +40,22 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+   void _desafio02() {
+    final int A = 5; 
+    final int B = 7; 
+    final int C = 13;
+    
+    int soma = A + B;
+    bool maiorQueC = soma > C;
+
+    _result =
+        "A + B = ${soma.toString()}\nA + B é ${(maiorQueC ? 'maior' : 'menor')} do que C";
+
+    setState(() {
+      _result;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
