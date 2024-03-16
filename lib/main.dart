@@ -39,6 +39,19 @@ class _MyHomePageState extends State<MyHomePage> {
       _result = _counter.toString();
     });
   }
+  void desafio14(){
+    /*Crie uma função que inicialize uma lista com 10 números inteiros. Como resultado,
+mostre na tela o menor e o maior número da lista.
+Exemplo: entrada = [20, 1, 5, 23, 12] | saída = menor: 1, maior: 23*/
+
+List<int> entrada = [20, 1, 5, 23, 12,25,51,14,33,60];
+entrada.sort();
+  _result = "menor: ${entrada.first}";
+  _result += " maior: ${entrada.last}";
+  setState(() {
+    _result;
+  });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -68,7 +81,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
+        onPressed: desafio14,
         tooltip: 'Increment',
         backgroundColor: Colors.amber[100],
         foregroundColor : Colors.redAccent.shade700,
