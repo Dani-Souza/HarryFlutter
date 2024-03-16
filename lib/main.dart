@@ -40,6 +40,24 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  void _desafio05() {
+    int A = 10; 
+    int B = 5; 
+    int valor = 0;
+
+    if(A == B){
+      valor = A + B;
+      _result = "Os valores de A($A) e B($B) são iguais e sua soma é igual a: $valor";
+    }else{
+      valor = A * B;
+      _result = "Os valores de A($A) e B($B) são diferentes e sua multiplicação é igual a: $valor";
+    }
+
+    setState(() {
+      _result;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
