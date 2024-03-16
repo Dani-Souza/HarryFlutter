@@ -46,10 +46,16 @@ class _MyHomePageState extends State<MyHomePage> {
     final int C = 13;
     
     int soma = A + B;
-    bool maiorQueC = soma > C;
-
-    _result =
-        "A + B = ${soma.toString()}\nA + B é ${(maiorQueC ? 'maior' : 'menor')} do que C";
+    if(soma > C){
+      _result =
+        "A soma de A($A) + B($B) é: $soma\nA($A) + B($B) é maior do que C($C)";
+    }else if(soma < C){
+      _result =
+        "A soma de A($A) + B($B) é: $soma\nA($A) + B($B) é menor do que C($C)";
+    }else{
+      _result =
+        "A soma de A($A) + B($B) é: $soma\nA($A) + B($B) é igual a C($C)";
+    }
 
     setState(() {
       _result;
