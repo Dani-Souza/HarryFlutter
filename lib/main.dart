@@ -40,6 +40,20 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  /*Crie uma função que salve, em uma lista, do número 0 até N, em que N é o número
+limite inicializado em uma variável. Como resultado, mostre a lista na tela.
+Exemplo: entrada = 3 | saída = [0, 1, 2, 3]*/
+  void _desafio15() {
+    int numero = 10;
+    List<int> lista = [];
+    for (int i = 0; i <= numero; i++) {
+      lista.add(i);
+    }
+    setState(() {
+      _result = lista.toString();
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -52,7 +66,6 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
-
               'Resultado:',
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
@@ -68,10 +81,10 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
+        onPressed: _desafio15,
         tooltip: 'Increment',
         backgroundColor: Colors.amber[100],
-        foregroundColor : Colors.redAccent.shade700,
+        foregroundColor: Colors.redAccent.shade700,
         child: const Icon(Icons.add_task),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
