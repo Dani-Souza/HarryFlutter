@@ -39,6 +39,27 @@ class _MyHomePageState extends State<MyHomePage> {
       _result = _counter.toString();
     });
   }
+/*funcao criada para calcular o fatorial ultilizado na funcao desafio01*/ 
+int calcularFatorial(int n) {
+
+  if (n == 0) {
+    return 1;
+  } else {
+    return n * calcularFatorial(n - 1); 
+  }
+}
+/*Crie uma função que inicialize um número inteiro. Como resultado, mostre na tela o
+fatorial desse número.*/ 
+  void _desafio03(){
+    int numero = 9; // Número para o qual você deseja calcular o fatorial
+  int resultado = calcularFatorial(numero);
+  _result=resultado.toString();
+setState(() {
+  _result;
+});
+
+  }
+
 
   @override
   Widget build(BuildContext context) {
