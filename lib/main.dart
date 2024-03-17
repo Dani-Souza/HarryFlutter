@@ -44,6 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
 mostre na tela o menor e o maior número da lista.
 Exemplo: entrada = [20, 1, 5, 23, 12] | saída = menor: 1, maior: 23*/
 
+
 List<int> entrada = [20, 1, 5, 23, 12,25,51,14,33,60];
 entrada.sort();
   _result = "menor: ${entrada.first}";
@@ -83,6 +84,33 @@ void desafio16(){
     _result;
   });
 }
+    /*
+Crie uma função que inicialize um número e imprime uma mensagem dizendo se ele
+é ou não é um número primo.
+Nota: Um número primo é um número que só é divisível (divisão exata / sem resto)
+por 1 e ele mesmo.
+*/
+  void _desafio17() {
+    int numero = 550;
+    if (numero <= 1 && _result == "resultado") {
+      _result = "$numero Não é numero primo";
+    }
+    if (numero == 2 && _result == "resultado") {
+      _result = "$numero é numero primo";
+    }
+    if (numero % 2 == 0 && _result == "resultado") {
+      _result = "$numero Não é numero primo";
+    }
+    if (_result == "resultado") {
+      for (int i = 3; i <= numero ~/ 2; i += 2) {
+        if (numero % i == 0) {
+          _result = "$numero Não é numero primo";
+        }
+      }
+    }
+    if (_result == "resultado") {
+      _result = "$numero é numero primo";
+    }
 
   /*
  Crie uma função que inicialize uma palavra e inicialize uma frase. Como resultado,
@@ -162,10 +190,6 @@ setState(() {
 });
 }
 
-
-
-
-
   /*  Faça uma função que inicialize um número inteiro qualquer. Como resultado, mostre na tela o seu antecessor e o seu sucessor.*/
   void _desafio06() {
     int numero = 6;
@@ -235,6 +259,7 @@ Exemplo: entrada = 3 | saída = [0, 1, 2, 3]*/
     });
   }
 
+
 void desafio4(){
   int numero = 0;
   String parImpar;
@@ -271,6 +296,7 @@ void desafio4(){
 
 
     }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
