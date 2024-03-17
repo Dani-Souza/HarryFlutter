@@ -215,6 +215,18 @@ void desafio4(){
   });
 }
 
+    void desafio07(){
+      double salarioMinimo = 1412;
+      double salarioUsuario = 3000;
+      double resultado =salarioUsuario / salarioMinimo;
+
+
+      setState(() {
+      _result = 'o usuario recebe $resultado salarios minimos';
+    });
+
+
+    }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -242,7 +254,7 @@ void desafio4(){
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: desafio4,
+        onPressed: desafio07,
         tooltip: 'Increment',
         backgroundColor: Colors.amber[100],
         foregroundColor: Colors.redAccent.shade700,
