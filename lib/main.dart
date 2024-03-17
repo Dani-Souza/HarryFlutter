@@ -191,6 +191,30 @@ Exemplo: entrada = 3 | saída = [0, 1, 2, 3]*/
     });
   }
 
+void desafio4(){
+  int numero = 0;
+  String parImpar;
+  String positivoNegativo;
+
+  if(numero % 2 == 0){
+    parImpar = 'par';
+  } else{
+    parImpar = 'Impar';
+  }
+
+    if( numero >= 0){
+      positivoNegativo ='positivo';
+    }else{
+      positivoNegativo = 'Negativo';
+    }
+
+  _result = 'o numero $numero eh $parImpar e $positivoNegativo';
+
+  setState(() {
+    _result; 
+  });
+}
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -218,8 +242,8 @@ Exemplo: entrada = 3 | saída = [0, 1, 2, 3]*/
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'increment',
+        onPressed: desafio4,
+        tooltip: 'Increment',
         backgroundColor: Colors.amber[100],
         foregroundColor: Colors.redAccent.shade700,
         child: const Icon(Icons.add_task),
