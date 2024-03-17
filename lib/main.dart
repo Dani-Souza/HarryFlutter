@@ -97,6 +97,22 @@ setState(() {
     });
   }
 
+  /*
+  Crie uma função que inicialize uma lista com números inteiros. Como resultado,
+  mostre na tela uma lista com o quadrado dos números da lista original.
+  Exemplo: entrada = [1, 2, 3] | saída = [1, 4, 9]*/
+  void _desafio12() {
+    //inicializado lista
+    List<int> numeros = [1, 2, 3];
+    //inicializado uma nova lista com novos valores
+    List<int> numerosAoQuadrado =
+        numeros.map((numero) => numero * numero).toList();
+    _result = "Entrada = $numeros \nSaída = ${numerosAoQuadrado.toString()} ";
+    setState(() {
+      _result;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
