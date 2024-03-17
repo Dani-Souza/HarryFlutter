@@ -39,6 +39,42 @@ class _MyHomePageState extends State<MyHomePage> {
       _result = _counter.toString();
     });
   }
+
+  /*
+ Crie uma função que inicialize uma palavra e inicialize uma frase. Como resultado,
+mostre na tela quantas vezes aquela palavra aparece na frase, independente de
+letras maiúsculas e minúsculas.
+Exemplo:
+Palavra = “eu”
+Frase = “Eu posso posso eu eu tudo o mais que eu quiser Eu”
+Resultado = 5
+ */
+
+  void _desafio18() {
+    //inicializado váriaveis
+    //Este texto é um Texto criado para testar o TEXTO se o texTO existe.
+    //Eu posso posso eu eu tudo o mais que eu quiser Eu
+    String frase =
+        "Este texto é um Texto criado para testar o TEXTO se o texTO existe.";
+    String palavra = "texto";
+    int quantidade = 0;
+    //criando uma lista das palavras que estão no texto
+    List<String> listaPalavras = frase.split(' ');
+    // percorrendo a lista com loop for
+    for (String texto in listaPalavras) {
+      // verificando se a palavra existe na  nova lista criada.
+      //toUpperCase deixa o texto todo maisculo para comparação
+      if (texto.toUpperCase().contains(palavra.toUpperCase())) {
+        quantidade++;
+      }
+    }
+
+    _result = "Existe $quantidade palavra(s) $palavra";
+     setState(() {
+      _result;
+    });
+  }
+
 /*Crie uma função que inicialize dois valores inteiros (A e B). Como resultado, mostre na tela qual é o maior valor.*/ 
   void _desafio01(){
     int a = 30;
@@ -53,7 +89,6 @@ class _MyHomePageState extends State<MyHomePage> {
     setState(() {
       _result;
     });
-
   }
 
 
@@ -77,13 +112,14 @@ void _desafio09(){
     _result="a media do aluno e $media e foi aprovado";
 }else{
   _result="a media do aluno e $media e nao foi aprovado";
+    }
 setState(() {
   _result;
 });
 }
 
 
-}
+
 
 
   /*  Faça uma função que inicialize um número inteiro qualquer. Como resultado, mostre na tela o seu antecessor e o seu sucessor.*/
@@ -148,6 +184,7 @@ Exemplo: entrada = 3 | saída = [0, 1, 2, 3]*/
     }
     _result =
         "Na lista existe $quantidadePar números pares e $quantidadeImpar numeros impar";
+
 
     setState(() {
       _result;
