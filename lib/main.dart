@@ -39,6 +39,52 @@ class _MyHomePageState extends State<MyHomePage> {
       _result = _counter.toString();
     });
   }
+/*Crie uma função que inicialize dois valores inteiros (A e B). Como resultado, mostre na tela qual é o maior valor.*/ 
+  void _desafio01(){
+    int a = 30;
+    int b = 20;
+    if (a > b){
+      _result ="O valor de A ($a) é maior que B ($b) ";
+
+    }else{
+      _result ="O valor de B ($b) é maior que A ($a) ";
+
+    }
+    setState(() {
+      _result;
+    });
+
+  }
+
+
+/*Crie uma função que inicialize uma lista de notas de um aluno, calcule a média das
+notas. Como resultado, mostre na tela a média do aluno e se ele foi aprovado ou
+reprovado (média para aprovação: 7).*/
+
+void _desafio09(){
+  List<int> notas = [9, 5, 9, 6];
+  int mediaAprovacao = 7;
+  int soma = 0;
+
+  for(int nota in notas){
+
+    soma = soma + nota;
+  }
+
+  double media = soma / 4;
+
+  if(media >=mediaAprovacao){
+    _result="a media do aluno e $media e foi aprovado";
+}else{
+  _result="a media do aluno e $media e nao foi aprovado";
+setState(() {
+  _result;
+});
+}
+
+
+}
+
 
   /*  Faça uma função que inicialize um número inteiro qualquer. Como resultado, mostre na tela o seu antecessor e o seu sucessor.*/
   void _desafio06() {
