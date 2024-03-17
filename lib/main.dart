@@ -39,6 +39,23 @@ class _MyHomePageState extends State<MyHomePage> {
       _result = _counter.toString();
     });
   }
+/*Crie uma função que inicialize dois valores inteiros (A e B). Como resultado, mostre na tela qual é o maior valor.*/ 
+  void _desafio01(){
+    int a = 30;
+    int b = 20;
+    if (a > b){
+      _result ="O valor de A ($a) é maior que B ($b) ";
+
+    }else{
+      _result ="O valor de B ($b) é maior que A ($a) ";
+
+    }
+    setState(() {
+      _result;
+    });
+
+  }
+
 
 /*Crie uma função que inicialize uma lista de notas de um aluno, calcule a média das
 notas. Como resultado, mostre na tela a média do aluno e se ele foi aprovado ou
@@ -97,7 +114,7 @@ setState(() {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
+        onPressed: _desafio01,
         tooltip: 'Increment',
         backgroundColor: Colors.amber[100],
         foregroundColor : Colors.redAccent.shade700,
