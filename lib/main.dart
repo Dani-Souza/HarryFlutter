@@ -113,6 +113,20 @@ setState(() {
     });
   }
 
+  /*Crie uma função que salve, em uma lista, do número 0 até N, em que N é o número
+limite inicializado em uma variável. Como resultado, mostre a lista na tela.
+Exemplo: entrada = 3 | saída = [0, 1, 2, 3]*/
+  void _desafio15() {
+    int numero = 10;
+    List<int> lista = [];
+    for (int i = 0; i <= numero; i++) {
+      lista.add(i);
+    }
+    setState(() {
+      _result = lista.toString();
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
