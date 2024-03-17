@@ -40,6 +40,38 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  /*
+Crie uma função que inicialize um número e imprime uma mensagem dizendo se ele
+é ou não é um número primo.
+Nota: Um número primo é um número que só é divisível (divisão exata / sem resto)
+por 1 e ele mesmo.
+*/
+  void _desafio17() {
+    int numero = 550;
+    if (numero <= 1 && _result == "resultado") {
+      _result = "$numero Não é numero primo";
+    }
+    if (numero == 2 && _result == "resultado") {
+      _result = "$numero é numero primo";
+    }
+    if (numero % 2 == 0 && _result == "resultado") {
+      _result = "$numero Não é numero primo";
+    }
+    if (_result == "resultado") {
+      for (int i = 3; i <= numero ~/ 2; i += 2) {
+        if (numero % i == 0) {
+          _result = "$numero Não é numero primo";
+        }
+      }
+    }
+    if (_result == "resultado") {
+      _result = "$numero é numero primo";
+    }
+    setState(() {
+      _result;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -52,7 +84,6 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
-
               'Resultado:',
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
@@ -71,7 +102,7 @@ class _MyHomePageState extends State<MyHomePage> {
         onPressed: _incrementCounter,
         tooltip: 'Increment',
         backgroundColor: Colors.amber[100],
-        foregroundColor : Colors.redAccent.shade700,
+        foregroundColor: Colors.redAccent.shade700,
         child: const Icon(Icons.add_task),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
