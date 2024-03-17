@@ -127,6 +127,33 @@ Exemplo: entrada = 3 | saída = [0, 1, 2, 3]*/
     });
   }
 
+  /*Crie uma função que inicialize uma lista com 10 números inteiros. Como resultado,
+  mostre na tela a quantidade de números pares e a quantidade de números impares
+  que existem na lista.*/
+
+  void _desafio13() {
+    //Inicialização Variáveis e lista
+    List<int> numeros = [2, 3, 5, 7, 21, 41, 87, 2, 12, 8];
+    int quantidadePar = 0;
+    int quantidadeImpar = 0;
+    //Loop para percorrer a lista
+    for (int numero in numeros) {
+      //armazendo o resto da divisão
+      int divisao = numero % 2;
+      if (divisao == 0) {
+        quantidadePar++;
+      } else {
+        quantidadeImpar++;
+      }
+    }
+    _result =
+        "Na lista existe $quantidadePar números pares e $quantidadeImpar numeros impar";
+
+    setState(() {
+      _result;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
