@@ -40,6 +40,35 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+/*Crie uma função que inicialize uma lista de notas de um aluno, calcule a média das
+notas. Como resultado, mostre na tela a média do aluno e se ele foi aprovado ou
+reprovado (média para aprovação: 7).*/
+
+void _desafio09(){
+  List<int> notas = [9, 5, 9, 6];
+  int mediaAprovacao = 7;
+  int soma = 0;
+
+  for(int nota in notas){
+
+    soma = soma + nota;
+  }
+
+  double media = soma / 4;
+
+  if(media >=mediaAprovacao){
+    _result="a media do aluno e $media e foi aprovado";
+}else{
+  _result="a media do aluno e $media e nao foi aprovado";
+setState(() {
+  _result;
+});
+}
+
+
+}
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
