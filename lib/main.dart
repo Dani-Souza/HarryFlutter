@@ -51,7 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _desafio01() {
     /*Crie uma função que inicialize dois valores inteiros (A e B). Como resultado, mostre na tela qual é o maior valor.*/
-    int a = 30;
+    int a = 10;
     int b = 20;
     if (a > b) {
       _result = "O valor de A ($a) é maior que B ($b) ";
@@ -66,8 +66,8 @@ class _MyHomePageState extends State<MyHomePage> {
   void _desafio02() {
     /*Crie uma função que inicialize os valores de A, B, C. Como resultado, mostre na tela a
 soma entre A e B e se a soma é maior ou menor do que C.*/
-    final int A = 5;
-    final int B = 7;
+    final int A = 10;
+    final int B = 3;
     final int C = 13;
 
     int soma = A + B;
@@ -90,7 +90,7 @@ soma entre A e B e se a soma é maior ou menor do que C.*/
   void _desafio03() {
 /*Crie uma função que inicialize um número inteiro. Como resultado, mostre na tela o
 fatorial desse número.*/
-    int numero = 9; // Número para o qual você deseja calcular o fatorial
+    int numero = 5; // Número para o qual você deseja calcular o fatorial
     int resultado = calcularFatorial(numero);
     _result = resultado.toString();
     setState(() {
@@ -98,10 +98,10 @@ fatorial desse número.*/
     });
   }
 
-  void _desafio4() {
+  void _desafio04() {
     /*Crie uma função que inicialize um número qualquer. Como resultado, mostre na tela
 se o número é par ou ímpar e positivo ou negativo.*/
-    int numero = 0;
+    int numero = 5;
     String parImpar;
     String positivoNegativo;
 
@@ -117,7 +117,7 @@ se o número é par ou ímpar e positivo ou negativo.*/
       positivoNegativo = 'Negativo';
     }
 
-    _result = 'o numero $numero eh $parImpar e $positivoNegativo';
+    _result = 'o numero $numero é $parImpar e $positivoNegativo';
 
     setState(() {
       _result;
@@ -130,7 +130,7 @@ forem iguais, deverá somar os dois valores, caso contrário deverá multiplicar
 Ao final de qualquer um dos cálculos deve-se atribuir o resultado a uma variável e
 mostrar seu valor na tela.*/
     int A = 10;
-    int B = 5;
+    int B = 10;
     int valor = 0;
 
     if (A == B) {
@@ -150,7 +150,7 @@ mostrar seu valor na tela.*/
 
   void _desafio06() {
     /*  Faça uma função que inicialize um número inteiro qualquer. Como resultado, mostre na tela o seu antecessor e o seu sucessor.*/
-    int numero = 6;
+    int numero = 10;
 
     _result =
         "O número $numero o seu antecessor é o número ${numero - 1} e o seu sucessor número ${numero + 1} ";
@@ -164,11 +164,12 @@ mostrar seu valor na tela.*/
 usuário em duas variáveis diferentes. Calcule quantos salários mínimos esse usuário
 ganha e mostre na tela o resultado. (Base para o salário mínimo R$ 1.412,00).*/
     double salarioMinimo = 1412;
-    double salarioUsuario = 3000;
+    double salarioUsuario = 6000;
     double resultado = salarioUsuario / salarioMinimo;
 
     setState(() {
-      _result = 'o usuario recebe $resultado salarios minimos';
+      _result =
+          'o usuario recebe ${resultado.toStringAsFixed(0)} salarios minimos';
     });
   }
 
@@ -176,7 +177,7 @@ ganha e mostre na tela o resultado. (Base para o salário mínimo R$ 1.412,00).*
     /*Crie uma função que inicialize três valores inteiros diferentes. Como resultado,
 mostre na tela os valores em ordem decrescente.
 Exemplo: entrada = [5, 6, 1, 9] | saída = [9, 6, 5, 1]*/
-    List<int> valores = [5, 6, 1, 9];
+    List<int> valores = [3, 24, 10, 5, 6, 1, 9];
 
     valores.sort((a, b) => b.compareTo(a));
     _result = "Valores em ordem decrescente: $valores";
@@ -190,7 +191,7 @@ Exemplo: entrada = [5, 6, 1, 9] | saída = [9, 6, 5, 1]*/
 notas. Como resultado, mostre na tela a média do aluno e se ele foi aprovado ou
 reprovado (média para aprovação: 7).*/
 
-    List<int> notas = [9, 5, 9, 6];
+    List<int> notas = [3, 5, 9, 6];
     int mediaAprovacao = 7;
     int soma = 0;
 
@@ -214,8 +215,8 @@ reprovado (média para aprovação: 7).*/
     /*Crie uma função que inicialize o nome e a idade de uma pessoa. Como resultado,
 mostre na tela o nome da pessoa e se ela é maior ou menor de idade.
 Exemplo: Fulana de Tal é menor de idade.*/
-    String nome = 'Andre';
-    int idade = 15;
+    String nome = 'José Andre';
+    int idade = 35;
 
     if (idade >= 18) {
       _result = '$nome é maior de idade';
@@ -231,7 +232,7 @@ Exemplo: Fulana de Tal é menor de idade.*/
     /*Crie uma função que inicialize um número inteiro e mostre na tela a tabuada de 1 a
 10 desse número.
 Dica: salve o resultado de cada operação em uma Lista e mostre a lista na tela.*/
-    int valor = 50;
+    int valor = 7;
     List<int> listaTabuada = [];
     _result = "";
 
@@ -254,7 +255,7 @@ Dica: salve o resultado de cada operação em uma Lista e mostre a lista na tela
   mostre na tela uma lista com o quadrado dos números da lista original.
   Exemplo: entrada = [1, 2, 3] | saída = [1, 4, 9]*/
     //inicializado lista
-    List<int> numeros = [1, 2, 3];
+    List<int> numeros = [4, 5, 6];
     //inicializado uma nova lista com novos valores
     List<int> numerosAoQuadrado =
         numeros.map((numero) => numero * numero).toList();
@@ -269,7 +270,7 @@ Dica: salve o resultado de cada operação em uma Lista e mostre a lista na tela
   mostre na tela a quantidade de números pares e a quantidade de números impares
   que existem na lista.*/
     //Inicialização Variáveis e lista
-    List<int> numeros = [2, 3, 5, 7, 21, 41, 87, 2, 12, 8];
+    List<int> numeros = [2, 3, 5, 4, 11, 35, 87, 2, 15, 9];
     int quantidadePar = 0;
     int quantidadeImpar = 0;
     //Loop para percorrer a lista
@@ -295,7 +296,7 @@ Dica: salve o resultado de cada operação em uma Lista e mostre a lista na tela
 mostre na tela o menor e o maior número da lista.
 Exemplo: entrada = [20, 1, 5, 23, 12] | saída = menor: 1, maior: 23*/
 
-    List<int> entrada = [20, 1, 5, 23, 12, 25, 51, 14, 33, 60];
+    List<int> entrada = [20, 3, 6, 23, 12, 25, 51, 14, 33, 90];
     entrada.sort();
     _result = "menor: ${entrada.first}";
     _result += " maior: ${entrada.last}";
@@ -308,7 +309,7 @@ Exemplo: entrada = [20, 1, 5, 23, 12] | saída = menor: 1, maior: 23*/
     /*Crie uma função que salve, em uma lista, do número 0 até N, em que N é o número
 limite inicializado em uma variável. Como resultado, mostre a lista na tela.
 Exemplo: entrada = 3 | saída = [0, 1, 2, 3]*/
-    int numero = 10;
+    int numero = 3;
     List<int> lista = [];
     for (int i = 0; i <= numero; i++) {
       lista.add(i);
@@ -355,7 +356,7 @@ Nota: Um número primo é um número que só é divisível (divisão exata / sem
 por 1 e ele mesmo.
 */
 
-    int numero = 550;
+    int numero = 571;
     if (numero <= 1 && _result == "resultado") {
       _result = "$numero Não é numero primo";
     }
@@ -394,9 +395,8 @@ Resultado = 5
     //inicializado váriaveis
     //Este texto é um Texto criado para testar o TEXTO se o texTO existe.
     //Eu posso posso eu eu tudo o mais que eu quiser Eu
-    String frase =
-        "Este texto é um Texto criado para testar o TEXTO se o texTO existe.";
-    String palavra = "texto";
+    String frase = "Eu posso posso eu eu tudo o mais que eu quiser Eu.";
+    String palavra = "eu";
     int quantidade = 0;
     //criando uma lista das palavras que estão no texto
     List<String> listaPalavras = frase.split(' ');
