@@ -31,7 +31,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
-  String _result = "resultado";
+  String _result = "";
 
   void _incrementCounter() {
     setState(() {
@@ -310,6 +310,24 @@ void desafio10() {
     _result;
   });
 }
+
+  void _desafio11() {
+    int valor = 50;
+    List<int> listaTabuada = [];
+    _result = "";
+    
+    for(int i = 1; i <= 10; i++){
+      listaTabuada.add(valor * i);
+    }
+
+    for(int i = 1; i <= 10; i++){
+      _result += "$valor x $i = ${listaTabuada[i - 1]}\n";
+    }
+
+    setState(() {
+      _result;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
