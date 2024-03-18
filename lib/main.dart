@@ -31,7 +31,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
-  String _result = "";
+  String _result = "resultado";
 
   void _incrementCounter() {
     setState(() {
@@ -39,7 +39,18 @@ class _MyHomePageState extends State<MyHomePage> {
       _result = _counter.toString();
     });
   }
-  void desafio14(){
+  
+void _desafio08() {
+    List<int> valores = [5, 6, 1, 9];
+
+    valores.sort((a, b) => b.compareTo(a));
+    _result = "Valores em ordem decrescente: $valores";
+    setState(() {
+      _result;
+    });
+}
+
+void desafio14(){
     /*Crie uma função que inicialize uma lista com 10 números inteiros. Como resultado,
 mostre na tela o menor e o maior número da lista.
 Exemplo: entrada = [20, 1, 5, 23, 12] | saída = menor: 1, maior: 23*/
@@ -284,7 +295,7 @@ void desafio4(){
   });
 }
 
-    void desafio07(){
+void desafio07(){
       double salarioMinimo = 1412;
       double salarioUsuario = 3000;
       double resultado =salarioUsuario / salarioMinimo;
@@ -295,7 +306,7 @@ void desafio4(){
     });
 
 
-    }
+}
 
 void desafio10() {
   String nome = 'Andre';
@@ -368,6 +379,7 @@ void desafio10() {
       _result;
     });
   }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -396,8 +408,7 @@ void desafio10() {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-       feat/desafio10
-        onPressed: desafio10,
+        onPressed: _incrementCounter,
         tooltip: 'Increment',
         backgroundColor: Colors.amber[100],
         foregroundColor: Colors.redAccent.shade700,
