@@ -39,7 +39,29 @@ class _MyHomePageState extends State<MyHomePage> {
       _result = _counter.toString();
     });
   }
-  
+
+/*funcao criada para calcular o fatorial ultilizado na funcao desafio01*/ 
+int calcularFatorial(int n) {
+
+  if (n == 0) {
+    return 1;
+  } else {
+    return n * calcularFatorial(n - 1); 
+  }
+}
+/*Crie uma função que inicialize um número inteiro. Como resultado, mostre na tela o
+fatorial desse número.*/ 
+  void _desafio03(){
+    int numero = 9; // Número para o qual você deseja calcular o fatorial
+  int resultado = calcularFatorial(numero);
+  _result=resultado.toString();
+setState(() {
+  _result;
+});
+
+  }
+
+ 
 void _desafio08() {
     List<int> valores = [5, 6, 1, 9];
 
@@ -54,7 +76,6 @@ void desafio14(){
     /*Crie uma função que inicialize uma lista com 10 números inteiros. Como resultado,
 mostre na tela o menor e o maior número da lista.
 Exemplo: entrada = [20, 1, 5, 23, 12] | saída = menor: 1, maior: 23*/
-
 
 List<int> entrada = [20, 1, 5, 23, 12,25,51,14,33,60];
 entrada.sort();
@@ -122,7 +143,11 @@ por 1 e ele mesmo.
     if (_result == "resultado") {
       _result = "$numero é numero primo";
     }
-
+    
+    setState(() {
+      _result;
+    });
+  }
   /*
  Crie uma função que inicialize uma palavra e inicialize uma frase. Como resultado,
 mostre na tela quantas vezes aquela palavra aparece na frase, independente de
@@ -380,6 +405,7 @@ void desafio10() {
     });
   }
   }
+
 
   @override
   Widget build(BuildContext context) {
